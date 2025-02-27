@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="style.css"/>
+  <title>WaSender</title>
+  
+</head>
+
+<body>
+  <div class="container">
+
+  <h1>Whatsapp Sender</h1>
+
+  <form>
+
+    <div class="form-row">
+
+      <div class="input-group">
+
+        <label for="ddd">DDD:</label>
+
+        <input type="number" id="ddd" value="11" name="ddd" maxlength="2" />
+
+      </div>
+
+      <div class="input-group-2">
+
+        <label for="phone">Telefone:</label>
+
+        <input type="number" id="phone" value="9" name="phone" maxlength="9" />
+
+      </div>
+
+    </div>
+
+    <button type="submit" id="btn">Enviar</button>
+
+  </form>
+
+</div>
+</body>
+<script src="script.js"></script>
+<script>
+
+ if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+    .then(registration => {
+      console.log('Service Worker registrado com sucesso!');
+    })
+    .catch(error => {
+      console.error('Erro ao registrar Service Worker:', error);
+    });
+ }
+</script>
+</html>
